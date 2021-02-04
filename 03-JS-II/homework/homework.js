@@ -177,28 +177,43 @@ function esPrimo(numero) {
   // Nota: Los números 0 y 1 NO son considerados números primos
   if (numero <= 1){
     return false
-  //no me sale
+    }
+  if (numero === 2) {
+    return true
+  } 
+  for (var z = 2; z <= numero; z++) {
+    if (numero % z === 0) {
+  return false 
+  }
+  else
+  return true
 }
 }
+   
 
 function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
 if (valor === true){
-  return true
+  return "Soy verdadero"
 }
 else if (valor === false)
-return false
+return "Soy falso"
 }
 //la consigna pide un string, pero me tiraba error. Lo rehice en base a lo que pide la terminal.
 
 function tablaDelSeis(){
-  //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
+  //Escribe una función que muestre la tabla de multiplicar del 6 (del 6 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-  
-}
+  var array6al60 = []
+  var x = 0
+  for (x; x <= 10 ;x++ ){
+    array6al60.push (x * 6)
+  }
+  return array6al60
+   } 
 
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
@@ -243,5 +258,5 @@ module.exports = {
   esVerdadero,
   tablaDelSeis,
   tieneTresDigitos,
-  doWhile
+  doWhile,
 };
